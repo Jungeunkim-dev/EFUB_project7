@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+
+
 body {
   background-color: rgb(255, 255, 255);
   display: flex;
   /*flex-direction: column;*/
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif,'Noto Serif KR',serif;
   margin: 0;
   min-height: 100vh;
   text-align: center;

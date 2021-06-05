@@ -32,7 +32,6 @@ import food2 from "./assets/food2.png";
 import food3 from "./assets/food3.png";
 import food4 from "./assets/food4.png";
 
-import NotoSerifKR from "./assets/fonts/NotoSerifKR-Black.otf"
 
 const Header = styled.div`
   display: flex;
@@ -44,7 +43,6 @@ const Header = styled.div`
   position: fixed;
   background-color: white;
 `
-
 
 const TextWrapper = styled.div`
   background-color:white;
@@ -109,12 +107,27 @@ const Center2 = styled.div`
 `
 
 const Column = styled.div`
-  font-family: "NotoSerifKR";
   display: flex;
   flex-direction: column;
   align-items:center;
 `
 
+const H1 = styled.h1`
+  font-family: 'Noto Serif KR';
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: 5px;
+  display: block;
+  align-items:center;
+`
+
+const H2 = styled.h2`
+  font-family: 'Noto Serif KR';
+  font-weight: 400;
+  font-size:18px;
+  display: block;
+  align-items:center;
+`
 
 const Button = styled.button`
 
@@ -158,10 +171,9 @@ function App() {
     </Header>
 
     <Center1>
-
       <Column>
-        <h1>| RECIPES FOR YOU |</h1>
-        <h2>맞춤추천 레시피를 둘러보세요.</h2>
+        <H1>| RECIPES FOR YOU |</H1>
+        <H2>맞춤추천 레시피를 둘러보세요.</H2>
       </Column>
 
       <ImageWrapper1>
@@ -178,8 +190,8 @@ function App() {
 
     <Center2>
       <Column>
-        <h1>| OUT RECIPES |</h1>
-        <h2>우리의식탁과 맛있는 음식을 만들어 보세요.</h2>
+        <H1>| OUT RECIPES |</H1>
+        <H2>우리의식탁과 맛있는 음식을 만들어 보세요.</H2>
       </Column>
       <div>
         <Router>
