@@ -52,6 +52,22 @@ const TextWrapper = styled.div`
   width: 362;
   gap:70px;
 `
+const H1 = styled.h1`
+  font-family: 'Noto Serif KR';
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: 5px;
+  display: block;
+  align-items:center;
+`
+
+const H2 = styled.h2`
+  font-family: 'Noto Serif KR';
+  font-weight: 400;
+  font-size:18px;
+  display: block;
+  align-items:center;
+`
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -176,8 +192,8 @@ function App() {
     <Center1>
 
       <Column>
-        <h1>| RECIPES FOR YOU |</h1>
-        <h2>맞춤추천 레시피를 둘러보세요.</h2>
+        <H1>| RECIPES FOR YOU |</H1>
+        <H2>맞춤추천 레시피를 둘러보세요.</H2>
       </Column>
 
       <ImageWrapper1>
@@ -208,8 +224,8 @@ function App() {
 
     <Center2>
       <Column>
-        <h1>| OUT RECIPES |</h1>
-        <h2>우리의식탁과 맛있는 음식을 만들어 보세요.</h2>
+        <H1>| OUT RECIPES |</H1>
+        <H2>우리의식탁과 맛있는 음식을 만들어 보세요.</H2>
       </Column>
       <div>
         <Router>
