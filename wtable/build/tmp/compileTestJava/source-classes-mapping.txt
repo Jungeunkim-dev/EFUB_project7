@@ -1,2 +1,0 @@
-com/team7/wtable/WtableApplicationTests.java
- com.team7.wtable.WtableApplicationTests
