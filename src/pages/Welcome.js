@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import axios from "axios"
 
 
 import step from '../img/step.png';
 import clock from '../img/clock.png';
-
-import foods from '../food.json';
 
 import NavItem from "../components/NavItem";
 
@@ -41,14 +39,27 @@ const Wrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     width: 1300px;
+    margin: 0 auto;
 `
 
 function Welcome(){
+  const [data,setData] = useState();
+  useEffect(async ()=>{
+    //const ID=window.localStorage.getItem("ID");
+    try{
+      const response = await axios.get('http://localhost:8080/food/get/%EC%B4%88%EB%8C%80%EC%9A%94%EB%A6%AC')
+      setData(response.data);
+      console.log(response.data);
+      
+    } catch(e){
+      console.log("error");
+    }
+
+  },[]);
   return(
    <div>
-    This is Welcome's page
     <Wrapper>
-     {foods?.map((food,i)=>
+     {data?.map((food,i)=>
      <Card>
       <Profile src={food.image}></Profile>
         <div style={{marginTop: "10px", marginBottom: "10px", color: "#61616B", fontSize: "90%"}}>

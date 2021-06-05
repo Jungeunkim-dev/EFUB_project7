@@ -1,14 +1,17 @@
 import styled from "styled-components";
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import axios from "axios"
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 
 import step from './img/step.png';
 import clock from './img/clock.png';
 
-import foods from './food.json';
+//import foods from './food.json';
 
-import NavItem from "./components/NavItem";
+import './css/Main.css';
+import Nav from "./components/Nav";
+import Line from "./components/Line";
 
 const Card = styled.div`
     //border: black solid 1px;
@@ -44,10 +47,34 @@ const Wrapper = styled.div`
 `
 
 function Main(){
+
+  const [data,setData] = useState();
+  useEffect(async ()=>{
+    //const ID=window.localStorage.getItem("ID");
+    try{
+      const response = await axios.get('http://localhost:8080/food')
+      setData(response.data);
+      console.log(response.data);
+      
+    } catch(e){
+      console.log("error");
+    }
+
+  },[]);
+  
+  /*
+  axios.get('http://localhost:8080/food').then((Response)=>{
+    console.log(Response.data);
+    }).catch((Error)=>{
+        console.log(Error);
+    })
+  */
   return(
    <div>
+     <Router>
+     </Router>
      <Wrapper>
-     {foods?.map((food,i)=>
+     {data?.map((food,i)=>
      <Card>
       <Profile src={food.image}></Profile>
         <div style={{marginTop: "10px", marginBottom: "10px", color: "#61616B", fontSize: "90%"}}>

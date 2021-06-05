@@ -11,7 +11,6 @@ const Nav_box = styled.div`
   width: 730px;
   margin: 0 auto;
   padding-bottom: 10px;
-  padding-top: 80px;
 `
 
 
@@ -27,7 +26,7 @@ function Nav() {
     { name: "채식", path: "/vege" },
     { name: "한식", path: "/korean" },
     { name: "양식", path: "/weston" },
-    { name: "별식", path: "/special" },
+    { name: "일식", path: "/special" },
     { name: "중식", path: "/chinese" },
     { name: "퓨전", path: "/mix" },
     { name: "분식", path: "/flour" },
