@@ -36,7 +36,7 @@ const Header = styled.div`
   display: flex;
   flex-direction: row;
   width:1792px;
-  justify-content: space-between;
+  justify-content: space-around;
   height:48px;
   box-shadow: 0px 2px 10px 0px silver;
   position: fixed;
@@ -92,8 +92,6 @@ const Center1 = styled.div`
   margin:0;
   padding-top:80px;
   padding-bottom: 80px;
-  padding-right: 18px;
-  padding-left: 18px;
 `
 
 const Center2 = styled.div`
