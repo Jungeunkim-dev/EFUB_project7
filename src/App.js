@@ -100,13 +100,34 @@ const ImageWrapper3 = styled.div`
   gap:20px;
 `
 
+const Image = styled.image`
+    &:hover {
+      filter:brightness(50%)
+    }
+
+`
+
+const Text = styled.h1`
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:#FFFFFF;
+  ${Image}:hover &{
+    display: block;
+    filter:brightness(100%)
+  }
+`
+
 const Center1 = styled.div`
   background-color:#F7F4F0;
   display: flex;
   flex-direction: column;
   width: 1792px;
   margin:0;
-  padding-top:80px;
+  padding-top:128px;
   padding-bottom: 80px;
 `
 
@@ -178,13 +199,27 @@ function App() {
       </Column>
 
       <ImageWrapper1>
+        <a href="https://wtable.co.kr/recipes/gjHK2PjsVKDyfKw3BAnEMqN4?is_recommended=true">
         <img src={food1} style={{height:"576px", width:"576px"}}/>
+        </a>
         <ImageWrapper2>
           <ImageWrapper3>
+            <Image>
+            <a href="https://wtable.co.kr/recipes/NCwNCJbYCFHSJqENzMHaSKGg?is_recommended=true">
             <img src={food2} style={{height:"275px", width:"275px"}}/>
+            </a>
+            <Text>양배추 볶음</Text>
+            </Image>
+            <Image>
+            <a href="https://wtable.co.kr/recipes/2YUDU7fBAopyvWHfHDuf59Pd?is_recommended=true">
             <img src={food3} style={{height:"275px", width:"275px"}}/>
+            <Text>김부각</Text>
+            </a>
+            </Image>
           </ImageWrapper3>
+          <a href="https://wtable.co.kr/recipes/K4J2neV6EgtwMJ7xmMPhbGQi?is_recommended=true">
           <img src={food4} style={{height:"277px", width:"572px"}}/>
+          </a>
         </ImageWrapper2>
       </ImageWrapper1>
     </Center1>
