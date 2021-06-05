@@ -32,6 +32,8 @@ import food2 from "./assets/food2.png";
 import food3 from "./assets/food3.png";
 import food4 from "./assets/food4.png";
 
+import NotoSerifKR from "./assets/fonts/NotoSerifKR-Black.otf"
+
 const Header = styled.div`
   display: flex;
   flex-direction: row;
@@ -107,6 +109,7 @@ const Center2 = styled.div`
 `
 
 const Column = styled.div`
+  font-family: "NotoSerifKR";
   display: flex;
   flex-direction: column;
   align-items:center;
