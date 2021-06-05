@@ -18,6 +18,9 @@ const Menus = styled.div`
     color: black;
     text-decoration: none;
     }
+    &:focus{
+      background-color:pink; 
+    }
 `
 
 function NavItem({ menu }) {
