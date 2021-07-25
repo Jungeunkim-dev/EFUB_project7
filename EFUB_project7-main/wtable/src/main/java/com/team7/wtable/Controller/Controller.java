@@ -30,8 +30,6 @@ public class Controller {
     서버 실행 후 localhost:8080/swagger-ui.html 에 접속하시면
     하단의 api 정리본을 확인하실 수 있습니다.
      */
-
-
     //전체 음식 리스트 반환
     @GetMapping
     public Iterable<Food> list(){

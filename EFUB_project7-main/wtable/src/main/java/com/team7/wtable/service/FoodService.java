@@ -12,6 +12,4 @@ import java.util.Optional;
 public class FoodService {
     @Autowired
     private FoodRepository foodRepository;
-
-
 }
